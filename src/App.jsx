@@ -41,14 +41,16 @@ export default function App() {
   return (
     <main class="container">
       <form onSubmit={submitHandler}>
-        <input type="file" onChange={archivoHandler} />
+        <label for="file">Subir una imagen
+          <input type="file" onChange={archivoHandler} />
+        </label>
         <input type="text" name="nombre" placeholder='¿Que Pasa?' />
         <button>Publicar</button>
       </form>
       <ul>
         {docus.map((doc) => (
           <li>
-            <h3>{doc.nombre}</h3>
+            <h3>Asunto: {doc.nombre}</h3>
             <img src={doc.url}  />
           </li>
         ))}
