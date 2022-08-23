@@ -6,7 +6,7 @@ import { LogoutButton } from './Logout';
 import React from 'react';
 import '@picocss/pico';
 
-function App() {
+function LoginPage() {
   const { isAuthenticated } = useAuth0();
     
   return (
@@ -23,4 +23,4 @@ function App() {
   );
 }
 
-export default App;
+export default LoginPage;
