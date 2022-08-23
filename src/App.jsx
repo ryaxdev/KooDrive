@@ -38,7 +38,7 @@ export default function App() {
   }, []);
 
   return (
-    <>
+    <main>
       <form onSubmit={submitHandler}>
         <input type="file" onChange={archivoHandler} />
         <input type="text" name="nombre" placeholder='¿Que Pasa?' />
@@ -52,6 +52,6 @@ export default function App() {
           </li>
         ))}
       </ul>
-    </>
+    </main>
   )
 }
