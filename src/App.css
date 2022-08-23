@@ -1,4 +1,10 @@
 img {
   border-radius: 15px;
   width: 350px;
+  display: block;
+  margin: 0px auto;
+}
+ul {
+  list-style-type: none;
+  text-align: center
 }
