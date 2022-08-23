@@ -33,13 +33,23 @@ export default function App() {
     window.location = "/";
   };
 
-  React.useEffect(async() => {
+  React.useEffect(async () => {
     const docusList = await app.firestore().collection("archivos").get();
     setDocus(docusList.docs.map((doc) => doc.data()));
   }, []);
 
   return (
     <main class="container">
+      <nav>
+        <ul>
+          <li><strong>Brand</strong></li>
+        </ul>
+        <ul>
+          <li><a href="#">Link</a></li>
+          <li><a href="#">Link</a></li>
+          <li><a href="#" role="button">Button</a></li>
+        </ul>
+      </nav>
       <form onSubmit={submitHandler}>
         <label for="file">Subir una imagen
           <input type="file" onChange={archivoHandler} />
@@ -50,8 +60,10 @@ export default function App() {
       <ul>
         {docus.map((doc) => (
           <li>
-            <h3>Asunto: {doc.nombre}</h3>
-            <img src={doc.url}  />
+            <article>
+              <h3>Asunto: {doc.nombre}</h3>
+              <img src={doc.url} />
+            </article>
           </li>
         ))}
       </ul>
