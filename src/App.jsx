@@ -47,20 +47,20 @@ export default function App() {
 
   return (
     <main class="container">
-      
-      {isAuthenticated ? (
-          <>
-            <LogoutButton />
-          </>
-        ) : (
-          <LoginButton />
-        )}
+      <nav>
+        <ul>
+          <li><strong>KooDrive</strong></li>
+        </ul>
+        <ul>
+          <li><a href="./LoginPage.jsx" role="button">Cuenta</a></li>
+        </ul>
+      </nav>
       <form onSubmit={submitHandler}>
         <input type="text" name="nombre" placeholder='¿Que Pasa?' />
         <label for="file">Subir una imagen
           <input type="file" onChange={archivoHandler} />
         </label>
-        
+
         <button class="outline">Publicar</button>
       </form>
       <ul>
