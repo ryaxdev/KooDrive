@@ -69,7 +69,7 @@ export default function App() {
           <input type="file" onChange={archivoHandler} />
         </label>
         
-        <button>Publicar</button>
+        <button class="outline">Publicar</button>
       </form>
       <ul>
         {docus.map((doc) => (
