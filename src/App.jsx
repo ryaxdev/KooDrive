@@ -75,7 +75,7 @@ export default function App() {
         {docus.map((doc) => (
           <li>
             <article>
-              <h3>username: {doc.nombre}</h3>
+              <h3>{user.name}</h3>
               <p>{doc.nombre}</p>
               <img src={doc.url} />
             </article>
