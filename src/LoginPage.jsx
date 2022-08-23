@@ -10,7 +10,7 @@ function LoginPage() {
   const { isAuthenticated } = useAuth0();
     
   return (
-    <main>
+    <div>
       {isAuthenticated ? (
           <>
             <Profile />
@@ -19,7 +19,7 @@ function LoginPage() {
         ) : (
           <LoginButton />
         )}
-    </main>
+    </div>
   );
 }
 
