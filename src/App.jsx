@@ -1,4 +1,3 @@
-import './App.css'
 import '@picocss/pico'
 import React from 'react'
 import { app } from "./fb"
@@ -39,7 +38,7 @@ export default function App() {
   }, []);
 
   return (
-    <main>
+    <main class="container">
       <form onSubmit={submitHandler}>
         <input type="file" onChange={archivoHandler} />
         <input type="text" name="nombre" placeholder='¿Que Pasa?' />
