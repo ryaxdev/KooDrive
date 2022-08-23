@@ -1,3 +1,4 @@
+import './App.css'
 import '@picocss/pico'
 import React from 'react'
 import { app } from "./fb"
@@ -48,7 +49,7 @@ export default function App() {
         {docus.map((doc) => (
           <li>
             <h3>{doc.nombre}</h3>
-            <img src={doc.url} height="100px" width="100px" />
+            <img src={doc.url}  />
           </li>
         ))}
       </ul>
