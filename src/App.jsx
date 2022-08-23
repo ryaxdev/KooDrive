@@ -33,7 +33,7 @@ export default function App() {
     window.location = "/";
   };
 
-  React.useEffect(async () => {
+  React.useEffect(async() => {
     const docusList = await app.firestore().collection("archivos").get();
     setDocus(docusList.docs.map((doc) => doc.data()));
   }, []);
