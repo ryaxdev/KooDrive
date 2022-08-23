@@ -42,12 +42,10 @@ export default function App() {
     <main class="container">
       <nav>
         <ul>
-          <li><strong>Brand</strong></li>
+          <li><strong>KooDrive</strong></li>
         </ul>
         <ul>
-          <li><a href="#">Link</a></li>
-          <li><a href="#">Link</a></li>
-          <li><a href="#" role="button">Button</a></li>
+          <li><a href="#" role="button">Twitter</a></li>
         </ul>
       </nav>
       <form onSubmit={submitHandler}>
