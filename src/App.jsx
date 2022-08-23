@@ -1,9 +1,16 @@
+import { useAuth0 } from "@auth0/auth0-react";
+
+import { LoginButton } from './Login';
+import { Profile } from './Profile';
+import { LogoutButton } from './Logout';
 import './App.css'
 import '@picocss/pico'
 import React from 'react'
 import { app } from "./fb"
 
 export default function App() {
+
+  const { isAuthenticated } = useAuth0();
 
   const [archivoUrl, setArchivoUrl] = React.useState("");
   const [docus, setDocus] = React.useState([]);
@@ -40,6 +47,14 @@ export default function App() {
 
   return (
     <main class="container">
+      {isAuthenticated ? (
+          <>
+            <Profile />
+            <LogoutButton />
+          </>
+        ) : (
+          <LoginButton />
+        )}
       <nav>
         <ul>
           <li><strong>KooDrive</strong></li>
@@ -49,17 +64,19 @@ export default function App() {
         </ul>
       </nav>
       <form onSubmit={submitHandler}>
+        <input type="text" name="nombre" placeholder='¿Que Pasa?' />
         <label for="file">Subir una imagen
           <input type="file" onChange={archivoHandler} />
         </label>
-        <input type="text" name="nombre" placeholder='¿Que Pasa?' />
+        
         <button>Publicar</button>
       </form>
       <ul>
         {docus.map((doc) => (
           <li>
             <article>
-              <h3>Asunto: {doc.nombre}</h3>
+              <h3>username: {doc.nombre}</h3>
+              <p>{doc.nombre}</p>
               <img src={doc.url} />
             </article>
           </li>
