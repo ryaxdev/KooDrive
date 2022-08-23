@@ -12,9 +12,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@firebase/storage": "^0.9.9",
-    "firebase": "^9.9.3",
-    "firebase-tools": "^11.8.0"
+    "@picocss/pico": "^1.5.3",
+    "firebase": "^9.9.3"
   },
   "devDependencies": {
     "@types/react": "^18.0.15",

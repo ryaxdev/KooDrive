@@ -1,4 +1,5 @@
 import './App.css'
+import '@picocss/pico'
 import React from 'react'
 import { app } from "./fb"
 
