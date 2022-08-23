@@ -48,21 +48,13 @@ export default function App() {
   return (
     <main class="container">
       
-      <nav>
-        <ul>
-          <li><strong>KooDrive</strong></li>
-        </ul>
-        <ul>
-          {isAuthenticated ? (
+      {isAuthenticated ? (
           <>
             <LogoutButton />
           </>
         ) : (
           <LoginButton />
         )}
-          <li><a href="#" role="button">Twitter</a></li>
-        </ul>
-      </nav>
       <form onSubmit={submitHandler}>
         <input type="text" name="nombre" placeholder='¿Que Pasa?' />
         <label for="file">Subir una imagen
