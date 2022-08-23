@@ -47,19 +47,19 @@ export default function App() {
 
   return (
     <main class="container">
-      {isAuthenticated ? (
-          <>
-            <Profile />
-            <LogoutButton />
-          </>
-        ) : (
-          <LoginButton />
-        )}
+      
       <nav>
         <ul>
           <li><strong>KooDrive</strong></li>
         </ul>
         <ul>
+          {isAuthenticated ? (
+          <>
+            <LogoutButton />
+          </>
+        ) : (
+          <LoginButton />
+        )}
           <li><a href="#" role="button">Twitter</a></li>
         </ul>
       </nav>
